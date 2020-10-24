@@ -15,5 +15,5 @@ git push -u origin main
 ----------------------现有存储库
 
 git remote add origin git@github.com：jhStayAlone / git_push_command.git
- git分支-M main 
+git branch -M main
 git push -u origin main

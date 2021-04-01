@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIT命令行</title>
+    <style>
+        .item_box {
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .item_test:first-child {
+            font-weight: bold;
+            color: rgb(110, 9, 243);
+        }
+        .item_test:last-child {
+            font-weight: bold;
+            color: rgb(84, 0, 241);
+        }
+        .item_test {
+            float: left;
+            width: 400px;
+            margin-left: 20px;
+            padding-left: 20px;
+            background-color: rgb(2, 255, 234);
+            line-height: 30px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>常用GIT命令</h1>
+    <div id="app">
+        <div class="item_box" v-for="item in gitCommandList">
+            <div class="item_test">{{item.title}}</div>
+            <div class="item_test">{{item.content}}</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/vue/2.1.3/vue.js"></script>
+    <script>
+        var Vue = new Vue({
+            el: '#app',
+            data: {
+                gitCommandList: [
+                    {
+                        title: 'git init -y',
+                        content: '初始化GIT'
+                    },
+                    {
+                        title: 'git clone "GIT地址"',
+                        content: '克隆GIT仓库'
+                    },
+                    {
+                        title: 'git log',
+                        content: '查看GIT提交记录'
+                    },
+                    {
+                        title: 'git status',
+                        content: '查看GIT提交状态'
+                    },
+                    {
+                        title: 'git branch',
+                        content: '查看本地分支'
+                    },
+                    {
+                        title: 'git branch -r',
+                        content: '查看远程分支'
+                    },
+                    {
+                        title: 'git branch -a',
+                        content: '查看所有分支'
+                    },
+                    {
+                        title: 'git checkout "分支名"',
+                        content: '切换到指定分支'
+                    },
+                    {
+                        title: 'git checkout -b "分支名"',
+                        content: '创建新分支并切换到该分支'
+                    },
+                    {
+                        title: 'git reset --hard <commit-id>',
+                        content: '版本回退到指定的提交id对应的版本（commit-id）'
+                    },
+                    {
+                        title: 'git add "文件名"',
+                        content: '提交指定文件到暂存区'
+                    },
+                    {
+                        title: 'git add .',
+                        content: '提交所有更改文件到暂存区'
+                    },
+                    {
+                        title: 'git commit -m "提交信息"',
+                        content: '将暂存区文件提交到本地仓库'
+                    },
+                    {
+                        title: 'git pull',
+                        content: '远程仓库代码更新到本地'
+                    },
+                    {
+                        title: 'git push origin master',
+                        content: '将本地仓库代码提交到远程仓库'
+                    },
+                    {
+                        title: 'git merge "分支名"',
+                        content: '合并指定分支代码到当前分支'
+                    },
+                    {
+                        title: 'git rm "文件名"',
+                        content: '删除指定文件'
+                    },
+                    {
+                        title: 'git config --global --list',
+                        content: '查看全局配置信息'
+                    },
+                    {
+                        title: 'git config --system --list',
+                        content: '查看系统配置信息'
+                    },
+                    {
+                        title: 'git config --local --list',
+                        content: '查看本地配置信息'
+                    },
+                    {
+                        title: 'git stash',
+                        content: '将文件保存到临时空间'
+                    },
+                    {
+                        title: 'git stash list',
+                        content: '查看临时空间文件'
+                    },
+                    {
+                        title: 'git stash apply',
+                        content: '恢复临时空间文件保留临时空间记录'
+                    },
+                    {
+                        title: 'git stash pop',
+                        content: '恢复临时空间文件并删除临时空间记录'
+                    },
+                    {
+                        title: 'git stash clear',
+                        content: '删除临时空间记录'
+                    },
+                ]
+            }
+        })
+    </script>
+</body>
+</html>
